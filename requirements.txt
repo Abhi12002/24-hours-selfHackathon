@@ -2,3 +2,9 @@ streamlit
 sentence-transformers
 pdfplumber
 torch
+spacy
+openai
+pandas
+scikit-learn
+numpy
+requests
