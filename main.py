@@ -8,13 +8,14 @@ import spacy
 import openai
 import re
 from datetime import datetime
+import os
 
 # Load models
 model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
 nlp = spacy.load("en_core_web_sm")
 
 # Set OpenAI API key
-openai.api_key = st.secrets.get("OPENAI_API_KEY", "")
+openai.api_key = os.getenv("OPENAI_API_KEY", "")
 
 # --- Utility Functions ---
 def extract_text_from_pdf(pdf_file):
